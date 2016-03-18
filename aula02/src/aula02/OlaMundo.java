@@ -113,6 +113,9 @@ public class OlaMundo {
 			System.out.println("Outro");
 			break;
 		}
+		
+		String nomePessoa = "João";
+		System.out.println("Olá " + nomePessoa + "! Seja Bem Vindo!");
 
 	}
 

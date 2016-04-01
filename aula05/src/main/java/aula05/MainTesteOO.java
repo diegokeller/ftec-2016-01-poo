@@ -55,6 +55,42 @@ public class MainTesteOO {
 		// Chama o GC
 		// Conheça mas NUNCA USE!!!!!!
 		System.gc();
+
+		// Passagem por valor
+		int numero = 5;
+		System.out.println(numero);
+		incrementar(numero);
+		System.out.println(numero);
+
+		// Passagem por referência
+		System.out.println(joao.getAtivo());
+		inativarPessoa(joao);
+		System.out.println(joao.getAtivo());
+
+		// Comparação de objetos
+		String nome1 = new String("João");
+		String nome2 = new String("João");
+		System.out.println("Nomes == " + (nome1 == nome2));
+		System.out.println("Nomes equals " + nome1.equals(nome2));
+
+		// Testando o equals da pessoa
+		Pessoa p1 = new Pessoa("João", "Silveira", new Date(), 123l,
+				true);
+		Pessoa p2 = new Pessoa("João", "Silveira", new Date(), 123l,
+				true);
+		System.out.println("Pessoas iguais " + p1.equals(p2));
+
+		System.out.println(p1);
+		System.out.println(p1.toString());
+
+	}
+
+	public static void incrementar(int valor) {
+		valor++;
+	}
+
+	public static void inativarPessoa(Pessoa pessoa) {
+		pessoa.setAtivo(false);
 	}
 
 }

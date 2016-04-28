@@ -15,7 +15,7 @@ public class Chuveiro extends Cronometro {
 	}
 
 	public long getConsumo() {
-		return getTempoEmSegundos() * vazao;
+		return getTempoEmSegundos() * (vazao / 60);
 	}
 
 }

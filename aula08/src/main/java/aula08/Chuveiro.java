@@ -14,8 +14,8 @@ public class Chuveiro extends Cronometro {
 		System.out.println("Chuveiro fechado.");
 	}
 
-	public long getConsumo() {
-		return getTempoEmSegundos() * (vazao / 60);
+	public float getConsumo() {
+		return getTempoEmSegundos() * (vazao / 60f);
 	}
 
 }

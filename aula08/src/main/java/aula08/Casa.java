@@ -43,4 +43,8 @@ public class Casa {
 	public float getTotalConsumo() {
 		return totalConsumo;
 	}
+
+	public void zerarMedidor() {
+		totalConsumo = 0;
+	}
 }

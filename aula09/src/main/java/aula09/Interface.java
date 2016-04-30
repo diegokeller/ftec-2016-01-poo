@@ -17,7 +17,7 @@ public class Interface {
 		System.out.println("0 - Sair");
 		System.out.println("1 - Incluir produto na Loja");
 		System.out.println("2 - Excluir produto da Loja");
-		System.out.println("3 - Mostar produts da Loja");
+		System.out.println("3 - Mostrar produts da Loja");
 
 		int opcao = leitor.nextInt();
 		leitor.nextLine();

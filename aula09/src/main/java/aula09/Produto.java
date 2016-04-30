@@ -49,4 +49,28 @@ public class Produto {
 		return true;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Float getPreco() {
+		return preco;
+	}
+
+	public void setPreco(Float preco) {
+		this.preco = preco;
+	}
+
+	public Integer getQuantidadeEmEstoque() {
+		return quantidadeEmEstoque;
+	}
+
+	public void setQuantidadeEmEstoque(Integer quantidadeEmEstoque) {
+		this.quantidadeEmEstoque = quantidadeEmEstoque;
+	}
+
 }

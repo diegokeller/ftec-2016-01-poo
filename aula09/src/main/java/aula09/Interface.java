@@ -6,18 +6,23 @@ public class Interface {
 
 	private Scanner leitor;
 	private Loja loja;
+	private Carrinho carrinho;
 
 	// Construtor
 	public Interface() {
 		leitor = new Scanner(System.in);
 		loja = new Loja();
+		carrinho = new Carrinho();
 	}
 
 	public void mostrarMenu() {
 		System.out.println("0 - Sair");
 		System.out.println("1 - Incluir produto na Loja");
 		System.out.println("2 - Excluir produto da Loja");
-		System.out.println("3 - Mostrar produts da Loja");
+		System.out.println("3 - Mostrar produtos da Loja");
+		System.out.println("4 - Adicionar produto ao carrinho");
+		System.out.println("5 - Remover produto do carrinho");
+		System.out.println("6 - Mostrar o carrinho");
 
 		int opcao = leitor.nextInt();
 		leitor.nextLine();
@@ -34,11 +39,36 @@ public class Interface {
 		case 3:
 			loja.mostrarProdutos();
 			break;
+		case 4:
+			incluirProdutoCarrinho();
+			break;
+		case 5:
+			removerProdutoCarrinho();
+			break;
+		case 6:
+			carrinho.emitirRelatorio();
+			break;
 		default:
 			System.out.println("Opção inválida.");
 			break;
 		}
 		mostrarMenu();
+	}
+
+	private void removerProdutoCarrinho() {
+		carrinho.emitirRelatorio();
+		System.out.println("Digite a posição que deseja remover:");
+		Integer posicao = leitor.nextInt();
+		leitor.nextLine();
+		carrinho.excluir(posicao);
+	}
+
+	private void incluirProdutoCarrinho() {
+		loja.mostrarProdutos();
+		System.out.println("Digite a posição do produto que deseja:");
+		Integer posicao = leitor.nextInt();
+		leitor.nextLine();
+		carrinho.incluir(loja.getProduto(posicao));
 	}
 
 	private void excluirProdutoLoja() {

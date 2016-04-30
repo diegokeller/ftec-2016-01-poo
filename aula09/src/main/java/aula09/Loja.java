@@ -89,4 +89,8 @@ public class Loja {
 
 	}
 
+	public Produto getProduto(Integer posicao) {
+		return produtos[posicao];
+	}
+
 }

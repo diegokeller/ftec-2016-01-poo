@@ -7,7 +7,7 @@ public class ListaReproducao {
 	public static final Integer TAMANHO = 10;
 	
 	public ListaReproducao() {
-		TAMANHO = 11; // atributos constantes não podem ser alteradas
+		TAMANHO = 25; // atributos constantes não podem ser alteradas
 		musicas = new String[TAMANHO];
 	}
 
